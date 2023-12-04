@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Ahmet & Nagihan</title>
+	
+</head>
+<body>
+	<h1 style="color:red;">Deneme Sitesi</h1>
+	<p>Hoşgeldiniz</p>
+	<script>
+		function logla(sonuc) {
+			if(sonuc === true) 
+				console.log('Başlayalım');
+			else
+				console.log('Bir dahaki sefere :)');
+		}
+		function hesapla() {
+			let last = document.getElementById("son").value;
+			let sum = last * (last + 1) / 2;
+			console.log("Toplam: ", );
+			document.getElementById("toplam").innerHTML = "Sonuç:" + sum;
+		}
+		function temizle() {
+			document.getElementById("son").value = '';
+			document.getElementById("toplam").innerHTML = "";
+		}
+	</script>
+	<button hidden="hidden" onclick="logla(confirm('Var mısın?'));">Tıkla</button>
+	<br/>
+	<form action="">
+		<input type="text" id="son">
+		<button type="button" onclick="hesapla();return false;">Hesapla</button>
+		<button type="button" onclick="temizle();return false;">Temizle</button>		
+		<br>
+		<label id="toplam"></label>
+	</form>
+</body>
+</html>
